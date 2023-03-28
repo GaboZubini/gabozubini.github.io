@@ -11,8 +11,8 @@ html {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     line-height: 1;
-    margin: 0
-  }
+    margin: 0;
+}
 
   .contenedor {
     max-width: 1200px;
@@ -137,4 +137,23 @@ h3 {
  .preview {
     height: 40rem;
     width: 40rem;
+ }
+
+ /**LISTADO RENDERS**/
+ .renders {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+ }
+
+ .renders li {
+    float: left;
+    width: 50%;
+    padding: 20px;
+ }
+
+ @media (min-width:768px){
+    .renders li {
+        width: 33.3%;
+     }
  }
