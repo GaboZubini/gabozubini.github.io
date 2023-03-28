@@ -1,0 +1,140 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1rem = 10px **/
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+    margin: 0
+  }
+
+  .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+    font-size: 10rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+ h4 {
+    font-size: 2.8rem;
+ }
+
+ img {
+    max-width: 100%;
+ }
+
+ /** UTILIDADES **/
+
+ .centrar-texto {
+    text-align: center;
+}
+ .no-margin {
+    margin: 0;
+}
+
+ /**header**/
+
+ .barra {
+    position: relative;
+ }
+
+
+@media (min-width:768px) {
+    .barra {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/**VIDEO**/
+#videoheader {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/**FIN VIDEO**/
+
+
+ .site-header{
+    /**background-image: url(../image/3.jpg);**/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+ }
+
+ .site-header a {
+    color: #ffffff;
+    text-decoration: none;
+ }
+
+ .site-header h1 {
+    text-align: center;
+    font-weight: 400;
+ }
+
+ .site-header h1 span {
+    font-weight: 700;
+ }
+
+ /**navegacion**/
+
+ .navegacion a{
+    text-align: center;
+    display:block;
+    font-size: 1.8rem;
+ }
+
+ @media (min-width: 768px) {
+    .navegacion a {
+        display: inline;
+        margin-right: 2rem;
+    }
+
+    /**.navegacion a:last-of-type {
+        margin: 0;
+    }**/
+ }
+ /**texto header**/
+ .texto-header {
+    color:#ffffff;
+    text-align: center;
+    margin-top: 10rem;
+    position: relative;
+    margin: 0;
+ }
+
+ .texto-header p {
+    margin: 0;
+    font-size: 1.5rem;
+ }
+
+ .preview {
+    height: 40rem;
+    width: 40rem;
+ }
