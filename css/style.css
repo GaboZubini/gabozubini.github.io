@@ -139,7 +139,7 @@ h3 {
     width: 40rem;
  }
 
- /**LISTADO RENDERS**/
+ /**LISTADO RENDERS
  .renders {
     display: flex;
     flex-wrap: wrap;
@@ -165,6 +165,114 @@ h3 {
     .renders li {
         width: 33.3%;
      }
+ }**/
+
+/**GALERIA DE RENDERS**/
+.galeria {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding-bottom: 8rem;
+ }
+ 
+ .galeria .columna {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
+ 
+ .render img {
+   width: 100%;
+   border-radius: 5px;
+   height: 100%;
+   object-fit: cover;
+ }
+ 
+ @media only screen and (min-width: 768px) {
+   .galeria {
+     flex-direction: row;
+   }
+
+   .galeria .columna{
+      width: 50%;
+   }   
+ }
+/**FIN GALERIA DE RENDERS**/
+ 
+/**SOBRE MI**/
+.cv {
+   background-color: #606060;
  }
 
- 
+.sobremi {
+   display: flex;
+   flex-direction: column;
+}
+
+.redes a {
+   margin-right: 2rem;
+   font-size: 3rem;
+   color: #ffffff;
+   text-decoration: none;
+}
+
+.redes a:hover {
+   margin-right: 2rem;
+   font-size: 3rem;
+   text-decoration: none;
+}
+
+.fa-linkedin:hover {
+   color: #254281;
+   transition: 0.3s;
+}
+
+.fa-whatsapp:hover {
+   color: #25812d;
+   transition: 0.3s;
+}
+
+.sidebar {
+   display: flex;
+   flex-direction: column;
+}
+
+.resumen {
+   display: flex;
+   flex-direction: column;
+   text-align: justify;
+   text-justify: inter-word;
+   padding: 5rem;
+}
+
+.cv h1 {
+   color: #ffffff;
+   margin: 5rem 0 0;
+}
+
+.cv p {
+   color:#ffffff
+}
+
+ @media (min-width: 768px) {
+
+.sobremi{
+   flex-direction: row;
+   align-items:center;
+}
+
+ .sidebar{
+   width: 33%;
+   text-align: right;
+ }
+
+ .resumen{
+   width:66%;
+ }
+
+ .cv h1 {
+   margin: 0;
+}
+}
+
+/**FIN SOBRE MI**/
