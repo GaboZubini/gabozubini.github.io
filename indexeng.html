@@ -40,16 +40,23 @@
         <div class="contenedor">
             <div class="galeria">
                 <div class="columna">
-                    <div class="render"><img src="image/1.jpg" alt=""></div>
-                    <div class="render"><img src="image/4.jpg" alt=""></div>
-                    <div class="render"><img src="image/6.jpg" alt=""></div>
+                    <div class="render"><img id="1" src="image/1.jpg" alt=""></div>
+                    <div class="render"><img id="4" src="image/4.jpg" alt=""></div>
+                    <div class="render"><img id="6" src="image/6.jpg" alt=""></div>
                 </div>
                 <div class="columna">
-                    <div class="render"><img src="image/5.jpg" alt=""></div>
-                    <div class="render"><img src="image/2.jpg" alt=""></div>
-                    <div class="render"><img src="image/3.jpg" alt=""></div>
+                    <div class="render"><img id="5" src="image/5.jpg" alt=""></div>
+                    <div class="render"><img id="2" src="image/2.jpg" alt=""></div>
+                    <div class="render"><img id="3" src="image/3.jpg" alt=""></div>
                 </div>
             </div>
+        
+            <!--PRUEBA GALERÍA-->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+            </div> 
+            <!--PRUEBA GALERÍA-->  
         </div>
 
         <div class="cv">
@@ -72,6 +79,63 @@
             </div>
         </div>
     </main>
+
+     <!--JS GALERIA-->
+     <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("1");
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+        
+        var img = document.getElementById("2");
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+        
+        var img = document.getElementById("3");
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+        
+        var img = document.getElementById("4");
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+        
+        var img = document.getElementById("5");
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+        
+        var img = document.getElementById("6");
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+    </script>
+    <!--JS GALERIA-->
 
 </body>
 </html>
