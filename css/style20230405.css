@@ -167,6 +167,10 @@ h3 {
    gap: 10px;
  }
  
+ .render {
+   overflow: hidden;
+ }
+
  .render img {
    display: block;
    width: 100%;
@@ -193,6 +197,7 @@ h3 {
 
 .render img:hover {
    filter: grayscale(0) !important;
+   transform: scale(1.1);   
    }
 
 /**FIN ANIMACION GALERIA**/
