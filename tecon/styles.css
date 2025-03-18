@@ -69,7 +69,8 @@
 
     .logo-text {
       font-size: 1.25rem;
-      font-weight: 700;
+      font-weight: 400;
+      font-family: 'Oswald';
     }
 
     nav {
@@ -675,7 +676,8 @@
 
     .footer-logo-text {
       font-size: 1.125rem;
-      font-weight: 700;
+      font-weight: 400;
+      font-family: 'Oswald';
     }
 
     .footer-about {
