@@ -10,259 +10,88 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Linked external stylesheet -->
   <link rel="stylesheet" href="styles.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Oswald', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background: #ffffff;
-      color: #333;
-      overflow: hidden;
-      height: 100vh;
-    }
-
-    .slideshow-container {
-      display: flex;
-      height: 100vh;
-      width: 100vw;
-      position: relative;
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .image-section {
-      position: relative;
-      width: 50%;
-      height: 100%;
-      overflow: hidden;
-      transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .slideshow-container.expanded .image-section {
-      width: 75%;
-    }
-
-    .slide-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .slide-image.active {
-      opacity: 1;
-    }
-
-    .text-section {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 4rem;
-      background: #ffffff;
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-      overflow-y: auto;
-    }
-
-    .slideshow-container.expanded .text-section {
-      width: 25%;
-      padding: 2rem;
-    }
-
-    .slide-content {
-      opacity: 0;
-      transition: opacity 0.6s ease-in-out;
-      position: absolute;
-    }
-
-    .slide-content.active {
-      opacity: 1;
-      position: relative;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 300;
-      margin-bottom: 1.5rem;
-      color: #1a1a1a;
-      transition: font-size 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .slideshow-container.expanded h1 {
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #2c2c2c;
-      transition: font-size 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .slideshow-container.expanded h2 {
-      font-size: 1.2rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 1rem;
-      transition: font-size 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .slideshow-container.expanded p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .slide-counter {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      font-size: 1rem;
-      color: #999;
-      z-index: 100;
-      font-weight: 300;
-    }
-
-    .navigation-hint {
-      position: fixed;
-      bottom: 2rem;
-      left: 2rem;
-      font-size: 0.9rem;
-      color: #999;
-      z-index: 100;
-      opacity: 1;
-      transition: opacity 0.5s ease;
-    }
-
-    .navigation-hint.hidden {
-      opacity: 0;
-    }
-
-    .progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      background: #333;
-      width: 0%;
-      transition: width 0.3s ease;
-      z-index: 101;
-    }
-
-    @media (max-width: 768px) {
-      .slideshow-container {
-        flex-direction: column;
-      }
-
-      .image-section {
-        width: 100% !important;
-        height: 50%;
-      }
-
-      .slideshow-container.expanded .image-section {
-        height: 70%;
-      }
-
-      .text-section {
-        width: 100% !important;
-        height: 50%;
-        padding: 2rem;
-      }
-
-      .slideshow-container.expanded .text-section {
-        height: 30%;
-        padding: 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .slideshow-container.expanded h1 {
-        font-size: 1.5rem;
-      }
-
-      h2 {
-        font-size: 1.2rem;
-      }
-
-      .slideshow-container.expanded h2 {
-        font-size: 1rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .slideshow-container.expanded p {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
 </head>
 <body>
   <div class="progress-bar" id="progressBar"></div>
   
   <div class="slideshow-container" id="slideshowContainer">
     <div class="image-section" id="imageSection">
-      <img src="img/P-ARCH-3D.jpg" alt="Architecture" class="slide-image active" data-slide="0">
-      <img src="img/P-STRU-3D.jpg" alt="Structure" class="slide-image" data-slide="1">
-      <img src="img/P-MECH-3D.jpg" alt="MEP" class="slide-image" data-slide="2">
-      <img src="img/P-PLBG-3D.jpg" alt="MEP" class="slide-image" data-slide="3">
-      <img src="img/P-ELEC-3D.jpg" alt="MEP" class="slide-image" data-slide="4">
+      <img src="img/ARCH.jpg" alt="Architecture" class="slide-image active" data-slide="0">
+      <img src="img/STRU.jpg" alt="Structure" class="slide-image" data-slide="1">
+      <img src="img/AGUA.jpg" alt="MEP" class="slide-image" data-slide="2">
+      <img src="img/PLUV.jpg" alt="MEP" class="slide-image" data-slide="3">
+      <img src="img/INCE.jpg" alt="MEP" class="slide-image" data-slide="4">
+      <img src="img/GAS.jpg" alt="MEP" class="slide-image" data-slide="5">
+      <img src="img/CLOA.jpg" alt="MEP" class="slide-image" data-slide="6">
+      <img src="img/HVAC.jpg" alt="MEP" class="slide-image" data-slide="7">
     </div>
 
     <div class="text-section" id="textSection">
-      <div class="slide-content active" data-slide="0">
-        <h1>BIM Presentation</h1>
-        <h2>Architecture</h2>
-        <p>The architectural model forms the foundation of our BIM workflow, defining the spatial organization, aesthetic vision, and functional requirements of the project.</p>
-        <p>Our architectural design integrates seamlessly with structural and MEP systems, ensuring coordination and clash detection throughout the design process.</p>
-        <p>Scroll or click to explore each trade in detail.</p>
-      </div>
+<div class="slide-content active" data-slide="0">
+  <h1>Presentación BIM</h1>
+  <h2>Arquitectura</h2>
+  <p>El modelo arquitectónico constituye la base del flujo de trabajo BIM, definiendo la organización espacial, la imagen proyectual y los requerimientos funcionales del edificio.</p>
+  <p>La arquitectura se integra de forma coordinada con los modelos estructurales e instalaciones, asegurando detección de interferencias y compatibilización durante todo el proceso de diseño.</p>
+  <p>Deslizá o hacé clic para recorrer cada especialidad en detalle.</p>
+</div>
 
-      <div class="slide-content" data-slide="1">
-        <h1>BIM Presentation</h1>
-        <h2>Structure</h2>
-        <p>The structural model encompasses all load-bearing elements including columns, beams, foundations, and lateral systems that ensure the building's stability and safety.</p>
-        <p>Advanced analysis and coordination with architectural elements guarantee optimal structural performance while maintaining design intent.</p>
-        <p>Precise modeling enables accurate quantity takeoffs and construction sequencing.</p>
-      </div>
+<div class="slide-content" data-slide="1">
+  <h1>Presentación BIM</h1>
+  <h2>Estructura</h2>
+  <p>El modelo estructural abarca todos los elementos portantes, como columnas, vigas, fundaciones y sistemas de arriostramiento que garantizan la estabilidad y seguridad de la obra.</p>
+  <p>El análisis avanzado y la coordinación con la arquitectura aseguran un desempeño estructural óptimo, manteniendo la intención del diseño.</p>
+  <p>El modelado preciso permite cómputos exactos de materiales y una secuencia constructiva más eficiente.</p>
+</div>
 
-      <div class="slide-content" data-slide="2">
-        <h1>BIM Presentation</h1>
-        <h2>MEP Systems</h2>
-        <p>Mechanical, Electrical, and Plumbing systems are fully coordinated in 3D, ensuring efficient routing and minimal conflicts with architectural and structural elements.</p>
-        <p>Our integrated approach optimizes system performance, energy efficiency, and maintainability throughout the building's lifecycle.</p>
-        <p>Detailed MEP modeling facilitates prefabrication and reduces on-site installation time.</p>
-      </div>
-      
-      <div class="slide-content" data-slide="3">
-        <h1>BIM Presentation</h1>
-        <h2>MEP Systems</h2>
-        <p>Mechanical, Electrical, and Plumbing systems are fully coordinated in 3D, ensuring efficient routing and minimal conflicts with architectural and structural elements.</p>
-        <p>Our integrated approach optimizes system performance, energy efficiency, and maintainability throughout the building's lifecycle.</p>
-        <p>Detailed MEP modeling facilitates prefabrication and reduces on-site installation time.</p>
-      </div>
-      
-      <div class="slide-content" data-slide="4">
-        <h1>BIM Presentation</h1>
-        <h2>MEP Systems</h2>
-        <p>Mechanical, Electrical, and Plumbing systems are fully coordinated in 3D, ensuring efficient routing and minimal conflicts with architectural and structural elements.</p>
-        <p>Our integrated approach optimizes system performance, energy efficiency, and maintainability throughout the building's lifecycle.</p>
-        <p>Detailed MEP modeling facilitates prefabrication and reduces on-site installation time.</p>
+<div class="slide-content" data-slide="2">
+  <h1>Presentación BIM</h1>
+  <h2>Distribución Sanitaria</h2>
+  <p>El sistema sanitario se modela en 3D para garantizar recorridos eficientes de cañerías y una correcta distribución de agua fría y caliente.</p>
+  <p>La coordinación en el entorno BIM evita interferencias con estructura y otras instalaciones, optimizando el montaje en obra.</p>
+  <p>El nivel de detalle del modelo facilita la prefabricación y reduce los tiempos de instalación.</p>
+</div>
+
+<div class="slide-content" data-slide="3">
+  <h1>Presentación BIM</h1>
+  <h2>Pluvial</h2>
+  <p>El sistema pluvial se desarrolla en BIM para asegurar el correcto drenaje de cubiertas y superficies, evitando acumulaciones y filtraciones.</p>
+  <p>El modelado permite definir pendientes, puntos de desagüe y bajadas pluviales de forma precisa y coordinada.</p>
+  <p>La visualización 3D mejora la planificación y reduce errores durante la ejecución.</p>
+</div>
+
+<div class="slide-content" data-slide="4">
+  <h1>Presentación BIM</h1>
+  <h2>Protección contra incendio</h2>
+  <p>El sistema de protección contra incendios se modela en BIM incluyendo cañerías, rociadores, bombas y gabinetes, asegurando cobertura total y cumplimiento normativo.</p>
+  <p>La coordinación con arquitectura y estructura garantiza la accesibilidad y funcionalidad del sistema.</p>
+  <p>Este enfoque permite validar el diseño hidráulico y optimizar la instalación en obra.</p>
+</div>
+
+<div class="slide-content" data-slide="5">
+  <h1>Presentación BIM</h1>
+  <h2>Distribución de gas</h2>
+  <p>El modelo de gas se integra en el entorno BIM para definir con precisión el recorrido de cañerías y conexiones a equipos.</p>
+  <p>La coordinación tridimensional evita conflictos con otras instalaciones y mejora la seguridad del sistema.</p>
+  <p>La documentación resultante agiliza aprobaciones y la ejecución en obra.</p>
+</div>
+
+<div class="slide-content" data-slide="6">
+  <h1>Presentación BIM</h1>
+  <h2>Cloacal</h2>
+  <p>El sistema cloacal se modela en BIM para definir correctamente colectores, ventilaciones y descargas sanitarias.</p>
+  <p>El modelado 3D permite revisar pendientes y cruces con estructura e instalaciones, garantizando un funcionamiento sin obstrucciones.</p>
+  <p>La precisión del modelo facilita la coordinación en obra y reduce retrabajos.</p>
+</div>
+
+<div class="slide-content" data-slide="7">
+  <h1>Presentación BIM</h1>
+  <h2>COVES y Climatización</h2>
+  <p>El modelo de climatización y COVES incluye conductos, equipos y rejillas, asegurando confort térmico y eficiencia energética.</p>
+  <p>El entorno BIM permite coordinar la instalación con estructura y arquitectura, optimizando espacios técnicos y alturas libres.</p>
+  <p>La simulación en 3D mejora la planificación y el mantenimiento futuro del sistema.</p>
+</div>
+
+
       </div>
     </div>
   </div>
@@ -378,4 +207,3 @@
   </script>
 </body>
 </html>
-
