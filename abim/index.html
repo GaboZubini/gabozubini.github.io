@@ -1,209 +1,452 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIM Presentation - 3D Model Trades</title>
-  <!-- Added Oswald font from Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Linked external stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación de Coordinación BIM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="progress-bar" id="progressBar"></div>
-  
-  <div class="slideshow-container" id="slideshowContainer">
-    <div class="image-section" id="imageSection">
-      <img src="img/ARCH.jpg" alt="Architecture" class="slide-image active" data-slide="0">
-      <img src="img/STRU.jpg" alt="Structure" class="slide-image" data-slide="1">
-      <img src="img/AGUA.jpg" alt="MEP" class="slide-image" data-slide="2">
-      <img src="img/PLUV.jpg" alt="MEP" class="slide-image" data-slide="3">
-      <img src="img/INCE.jpg" alt="MEP" class="slide-image" data-slide="4">
-      <img src="img/GAS.jpg" alt="MEP" class="slide-image" data-slide="5">
-      <img src="img/CLOA.jpg" alt="MEP" class="slide-image" data-slide="6">
-      <img src="img/HVAC.jpg" alt="MEP" class="slide-image" data-slide="7">
-    </div>
+    <header>
+        <div class="header-content">
+              <div class="logo">
+              <img src="img/logo.png" alt="A" class="logo-icon">
+              <span>BIM</span>
+              </div>
+            <div class="nav-indicator">
+                <span id="currentSlide">01</span> / 08
+            </div>
+        </div>
+    </header>
 
-    <div class="text-section" id="textSection">
-<div class="slide-content active" data-slide="0">
-  <h1>Presentación BIM</h1>
-  <h2>Arquitectura</h2>
-  <p>El modelo arquitectónico constituye la base del flujo de trabajo BIM, definiendo la organización espacial, la imagen proyectual y los requerimientos funcionales del edificio.</p>
-  <p>La arquitectura se integra de forma coordinada con los modelos estructurales e instalaciones, asegurando detección de interferencias y compatibilización durante todo el proceso de diseño.</p>
-  <p>Deslizá o hacé clic para recorrer cada especialidad en detalle.</p>
-</div>
+    <main>
+        <div class="slide-container" id="slideContainer">
+            <!-- Slide 1: Arquitectura -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-image">
+                    <img src="img/ARCH.jpg" alt="Modelo BIM de Arquitectura">
+                </div>
+                <div class="slide-content">
+                    <div class="slide-number">01 — Arquitectura</div>
+                    <h2 class="slide-title">Arquitectura</h2>
+                    <p class="slide-description">
+                        El modelo arquitectónico forma la base de nuestro proceso de coordinación BIM. Abarca la envolvente completa del edificio, distribuciones espaciales y elementos estéticos que definen la visión y funcionalidad del proyecto.
+                    </p>
+                    <div class="slide-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Alcance</span>
+                            <span>Envolvente, distribuciones interiores, acabados</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Coordinación</span>
+                            <span>Referencia principal para todas las disciplinas</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Elementos Clave</span>
+                            <span>Muros, pisos, techos, puertas, ventanas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="slide-content" data-slide="1">
-  <h1>Presentación BIM</h1>
-  <h2>Estructura</h2>
-  <p>El modelo estructural abarca todos los elementos portantes, como columnas, vigas, fundaciones y sistemas de arriostramiento que garantizan la estabilidad y seguridad de la obra.</p>
-  <p>El análisis avanzado y la coordinación con la arquitectura aseguran un desempeño estructural óptimo, manteniendo la intención del diseño.</p>
-  <p>El modelado preciso permite cómputos exactos de materiales y una secuencia constructiva más eficiente.</p>
-</div>
+            <!-- Slide 2: Estructura -->
+            <div class="slide" data-slide="2">
+                <div class="slide-image">
+                    <img src="img/STRU.jpg" alt="Modelo BIM de Estructura">
+                </div>
+                <div class="slide-content">
+                    <div class="slide-number">02 — Estructura</div>
+                    <h2 class="slide-title">Estructura</h2>
+                    <p class="slide-description">
+                        El sistema estructural proporciona el marco esquelético que soporta todo el edificio. Nuestro modelo BIM integra cimentaciones, columnas, vigas y losas para garantizar la integridad estructural y coordinación con elementos arquitectónicos.
+                    </p>
+                    <div class="slide-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Alcance</span>
+                            <span>Cimentaciones, columnas, vigas, losas, arriostramientos</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Coordinación</span>
+                            <span>Espacios críticos con sistemas MEP</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Elementos Clave</span>
+                            <span>Elementos portantes, conexiones, refuerzos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="slide-content" data-slide="2">
-  <h1>Presentación BIM</h1>
-  <h2>Distribución Sanitaria</h2>
-  <p>El sistema sanitario se modela en 3D para garantizar recorridos eficientes de cañerías y una correcta distribución de agua fría y caliente.</p>
-  <p>La coordinación en el entorno BIM evita interferencias con estructura y otras instalaciones, optimizando el montaje en obra.</p>
-  <p>El nivel de detalle del modelo facilita la prefabricación y reduce los tiempos de instalación.</p>
-</div>
+            <!-- Slide 3: Sanitario -->
+            <div class="slide" data-slide="3">
+                <div class="slide-image">
+                    <img src="img/CLOA.jpg" alt="Modelo BIM de Sanitario">
+                </div>
+                <div class="slide-content">
+                    <div class="slide-number">03 — Sanitario</div>
+                    <h2 class="slide-title">Sanitario</h2>
+                    <p class="slide-description">
+                        El sistema sanitario gestiona las aguas residuales y el drenaje en todo el edificio. Nuestro modelo incluye todos los artefactos, tuberías de desagüe, ventilaciones y conexiones para garantizar el flujo adecuado y el cumplimiento de las normativas sanitarias.
+                    </p>
+                    <div class="slide-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Alcance</span>
+                            <span>Tuberías de desagüe, ventilaciones, artefactos, líneas de residuos</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Coordinación</span>
+                            <span>Requisitos de flujo por gravedad, verificación de pendientes</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Elementos Clave</span>
+                            <span>Bajantes, tuberías de residuos, desagües de piso, ventilaciones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="slide-content" data-slide="3">
-  <h1>Presentación BIM</h1>
-  <h2>Pluvial</h2>
-  <p>El sistema pluvial se desarrolla en BIM para asegurar el correcto drenaje de cubiertas y superficies, evitando acumulaciones y filtraciones.</p>
-  <p>El modelado permite definir pendientes, puntos de desagüe y bajadas pluviales de forma precisa y coordinada.</p>
-  <p>La visualización 3D mejora la planificación y reduce errores durante la ejecución.</p>
-</div>
+            <!-- Slide 4: Agua Potable -->
+            <div class="slide" data-slide="4">
+                <div class="slide-image">
+                    <img src="img/AGUA.jpg" alt="Modelo BIM de Agua Potable">
+                </div>
+                <div class="slide-content">
+                    <div class="slide-number">04 — Agua Potable</div>
+                    <h2 class="slide-title">Agua Potable</h2>
+                    <p class="slide-description">
+                        El sistema de agua potable distribuye agua limpia en todo el edificio y gestiona la distribución de agua caliente. Nuestra coordinación BIM asegura un trazado óptimo, gestión de presión y accesibilidad para mantenimiento.
+                    </p>
+                    <div class="slide-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Alcance</span>
+                            <span>Suministro de agua, agua caliente, artefactos, bombas</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Coordinación</span>
+                            <span>Zonas de presión, dimensionamiento de tuberías, puntos de acceso</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Elementos Clave</span>
+                            <span>Líneas de suministro, montantes, válvulas, calentadores</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="slide-content" data-slide="4">
-  <h1>Presentación BIM</h1>
-  <h2>Protección contra incendio</h2>
-  <p>El sistema de protección contra incendios se modela en BIM incluyendo cañerías, rociadores, bombas y gabinetes, asegurando cobertura total y cumplimiento normativo.</p>
-  <p>La coordinación con arquitectura y estructura garantiza la accesibilidad y funcionalidad del sistema.</p>
-  <p>Este enfoque permite validar el diseño hidráulico y optimizar la instalación en obra.</p>
-</div>
+            <!-- Slide 5: Protección contra Incendios -->
+            <div class="slide" data-slide="5">
+                <div class="slide-image">
+                    <img src="img/INCE.jpg" alt="Modelo BIM de Protección contra Incendios">
+                </div>
+                <div class="slide-content">
+                    <div class="slide-number">05 — Protección contra Incendios</div>
+                    <h2 class="slide-title">Protección contra Incendios</h2>
+                    <p class="slide-description">
+                        La seguridad de vida es primordial. Nuestro sistema de protección contra incendios incluye rociadores, columnas secas y equipos de supresión, todos coordinados para proporcionar cobertura integral manteniendo requisitos estéticos y funcionales.
+                    </p>
+                    <div class="slide-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Alcance</span>
+                            <span>Rociadores, columnas secas, bombas contra incendios, alarmas</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Coordinación</span>
+                            <span>Áreas de cobertura, espacios libres, cumplimiento normativo</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Elementos Clave</span>
+                            <span>Cabezales de rociadores, matrices, montantes, válvulas de control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="slide-content" data-slide="5">
-  <h1>Presentación BIM</h1>
-  <h2>Distribución de gas</h2>
-  <p>El modelo de gas se integra en el entorno BIM para definir con precisión el recorrido de cañerías y conexiones a equipos.</p>
-  <p>La coordinación tridimensional evita conflictos con otras instalaciones y mejora la seguridad del sistema.</p>
-  <p>La documentación resultante agiliza aprobaciones y la ejecución en obra.</p>
-</div>
+            <!-- Slide 6: Gas -->
+            <div class="slide" data-slide="6">
+                <div class="slide-image">
+                    <img src="img/GAS.jpg" alt="Modelo BIM de Gas">
+                </div>
+                <div class="slide-content">
+                    <div class="slide-number">06 — Gas</div>
+                    <h2 class="slide-title">Gas</h2>
+                    <p class="slide-description">
+                        El sistema de distribución de gas entrega de manera segura gas natural a equipos y artefactos. Nuestro modelo asegura el dimensionamiento adecuado, requisitos de ventilación y medidas de seguridad integradas en todo el edificio.
+                    </p>
+                    <div class="slide-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Alcance</span>
+                            <span>Matrices de gas, ramales, medidores, reguladores</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Coordinación</span>
+                            <span>Espacios de seguridad, ventilación, válvulas de corte</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Elementos Clave</span>
+                            <span>Tuberías de suministro, válvulas, medidores, conexiones de artefactos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="slide-content" data-slide="6">
-  <h1>Presentación BIM</h1>
-  <h2>Cloacal</h2>
-  <p>El sistema cloacal se modela en BIM para definir correctamente colectores, ventilaciones y descargas sanitarias.</p>
-  <p>El modelado 3D permite revisar pendientes y cruces con estructura e instalaciones, garantizando un funcionamiento sin obstrucciones.</p>
-  <p>La precisión del modelo facilita la coordinación en obra y reduce retrabajos.</p>
-</div>
+            <!-- Slide 7: Pluvial -->
+            <div class="slide" data-slide="7">
+                <div class="slide-image">
+                    <img src="img/PLUV.jpg" alt="Modelo BIM de Pluvial">
+                </div>
+                <div class="slide-content">
+                    <div class="slide-number">07 — Pluvial</div>
+                    <h2 class="slide-title">Pluvial</h2>
+                    <p class="slide-description">
+                        El sistema pluvial conecta el edificio con la infraestructura municipal, gestionando toda la descarga de aguas residuales. Nuestra coordinación asegura pendientes adecuadas, acceso para limpieza y cumplimiento de regulaciones locales.
+                    </p>
+                    <div class="slide-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Alcance</span>
+                            <span>Alcantarillado del edificio, laterales, registros, conexiones</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Coordinación</span>
+                            <span>Elevaciones de invert, pendientes, conexiones municipales</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Elementos Clave</span>
+                            <span>Línea principal de alcantarillado, pozos, registros, trampas de grasa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="slide-content" data-slide="7">
-  <h1>Presentación BIM</h1>
-  <h2>COVES y Climatización</h2>
-  <p>El modelo de climatización y COVES incluye conductos, equipos y rejillas, asegurando confort térmico y eficiencia energética.</p>
-  <p>El entorno BIM permite coordinar la instalación con estructura y arquitectura, optimizando espacios técnicos y alturas libres.</p>
-  <p>La simulación en 3D mejora la planificación y el mantenimiento futuro del sistema.</p>
-</div>
+            <!-- Slide 8: HVAC/COVES -->
+            <div class="slide" data-slide="8">
+                <div class="slide-image">
+                    <img src="img/HVAC.jpg" alt="Modelo BIM de HVAC">
+                </div>
+                <div class="slide-content">
+                    <div class="slide-number">08 — HVAC/COVES</div>
+                    <h2 class="slide-title">HVAC/COVES</h2>
+                    <p class="slide-description">
+                        El sistema HVAC proporciona control climático y ventilación para el confort de los ocupantes y la calidad del aire. Nuestro modelo integral incluye calefacción, refrigeración, ventilación y controles, todos coordinados para optimizar espacio y rendimiento.
+                    </p>
+                    <div class="slide-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Alcance</span>
+                            <span>Ductos, equipos, controles, difusores</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Coordinación</span>
+                            <span>Alturas de cielo raso, acceso a equipos, trazado</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Elementos Clave</span>
+                            <span>UMAs, ductos, cajas VAV, termostatos, rejillas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Navigation Controls -->
+        <div class="controls">
+            <button class="control-btn" id="prevBtn" aria-label="Diapositiva anterior">←</button>
+            <button class="control-btn" id="nextBtn" aria-label="Siguiente diapositiva">→</button>
+        </div>
 
-      </div>
-    </div>
-  </div>
+        <!-- Progress Dots -->
+        <div class="progress-dots" id="progressDots"></div>
+    </main>
 
-  <div class="navigation-hint" id="navHint">Scroll, click, or swipe to navigate</div>
-  <div class="slide-counter" id="slideCounter">1 / 3</div>
+    <!-- Added courses section after slides -->
+    <section class="courses-section" id="coursesSection">
+        <div class="courses-container">
+            <div class="courses-image">
+                <img src="img/REVIT.jpg" alt="Pantalla con modelo REVIT">
+            </div>
+            <div class="courses-content">
+                <div class="section-label">Formación Profesional</div>
+                <h2 class="courses-title">Cursos de BIM</h2>
+                <p class="courses-description">
+                    Desarrolla tus habilidades en metodología BIM con nuestros cursos especializados. Aprende a dominar Revit, coordinación de modelos, detección de interferencias y flujos de trabajo colaborativos que transformarán tu práctica profesional.
+                </p>
+                <div class="courses-features">
+                    <div class="feature-item">
+                        <span class="feature-label">Modalidad</span>
+                        <span>Presencial y online</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-label">Duración</span>
+                        <span>Programas flexibles de 4 a 12 semanas</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-label">Certificación</span>
+                        <span>Certificado profesional al finalizar</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-label">Nivel</span>
+                        <span>Básico, intermedio y avanzado</span>
+                    </div>
+                </div>
+                <a href="#" class="courses-cta">Explorar Cursos →</a>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    const container = document.getElementById('slideshowContainer');
-    const images = document.querySelectorAll('.slide-image');
-    const contents = document.querySelectorAll('.slide-content');
-    const slideCounter = document.getElementById('slideCounter');
-    const navHint = document.getElementById('navHint');
-    const progressBar = document.getElementById('progressBar');
-    
-    let currentSlide = 0;
-    let isExpanded = false;
-    let isTransitioning = false;
-    let touchStartY = 0;
-    let touchStartX = 0;
-    const totalSlides = images.length;
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">© 2025 Coordinación BIM. Todos los derechos reservados.</div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Documentación</a>
+                <a href="#" class="footer-link">Contacto</a>
+                <a href="#" class="footer-link">Acerca de</a>
+            </div>
+        </div>
+    </footer>
 
-    function updateProgress() {
-      const progress = ((currentSlide + 1) / totalSlides) * 100;
-      progressBar.style.width = progress + '%';
-    }
+    <script>
+        // State management
+        let currentSlide = 0;
+        const totalSlides = 8;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentSlideDisplay = document.getElementById('currentSlide');
+        const progressDotsContainer = document.getElementById('progressDots');
+        const coursesSection = document.getElementById('coursesSection');
+        let isInSlidesMode = true;
 
-    function goToSlide(index) {
-      if (isTransitioning || index < 0 || index >= totalSlides) return;
-      
-      isTransitioning = true;
-
-      if (!isExpanded) {
-        container.classList.add('expanded');
-        isExpanded = true;
-        navHint.classList.add('hidden');
-      }
-
-      images[currentSlide].classList.remove('active');
-      contents[currentSlide].classList.remove('active');
-
-      currentSlide = index;
-
-      setTimeout(() => {
-        images[currentSlide].classList.add('active');
-        contents[currentSlide].classList.add('active');
-        slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
-        updateProgress();
-        
-        setTimeout(() => {
-          isTransitioning = false;
-        }, 600);
-      }, 100);
-    }
-
-    let scrollTimeout;
-    container.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        if (e.deltaY > 0) {
-          goToSlide(currentSlide + 1);
-        } else {
-          goToSlide(currentSlide - 1);
+        // Initialize progress dots
+        function initProgressDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'progress-dot';
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                dot.setAttribute('aria-label', `Ir a diapositiva ${i + 1}`);
+                progressDotsContainer.appendChild(dot);
+            }
         }
-      }, 50);
-    }, { passive: false });
 
-    container.addEventListener('touchstart', (e) => {
-      touchStartY = e.touches[0].clientY;
-      touchStartX = e.touches[0].clientX;
-    });
+        // Update slide display
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
 
-    container.addEventListener('touchend', (e) => {
-      const touchEndY = e.changedTouches[0].clientY;
-      const touchEndX = e.changedTouches[0].clientX;
-      const deltaY = touchStartY - touchEndY;
-      const deltaX = touchStartX - touchEndX;
+            // Update progress dots
+            const dots = document.querySelectorAll('.progress-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
 
-      if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
-        if (deltaY > 0) {
-          goToSlide(currentSlide + 1);
-        } else {
-          goToSlide(currentSlide - 1);
+            // Update slide counter
+            currentSlideDisplay.textContent = String(currentSlide + 1).padStart(2, '0');
+
+            // Update button states
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
         }
-      }
-    });
 
-    container.addEventListener('click', (e) => {
-      if (e.clientX > window.innerWidth / 2) {
-        goToSlide(currentSlide + 1);
-      } else {
-        goToSlide(currentSlide - 1);
-      }
-    });
+        // Navigation functions
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
-        e.preventDefault();
-        goToSlide(currentSlide + 1);
-      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        e.preventDefault();
-        goToSlide(currentSlide - 1);
-      }
-    });
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
 
-    updateProgress();
+        function goToSlide(index) {
+            if (index >= 0 && index < totalSlides) {
+                currentSlide = index;
+                updateSlide();
+            }
+        }
 
-    setTimeout(() => {
-      navHint.classList.add('hidden');
-    }, 3000);
-  </script>
+        // Event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                prevSlide();
+            }
+        });
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchEndX < touchStartX - swipeThreshold) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + swipeThreshold) {
+                prevSlide();
+            }
+        }
+
+        let isScrolling = false;
+        document.addEventListener('wheel', (e) => {
+            if (isScrolling) return;
+            
+            // Check if we're in slides mode
+            if (isInSlidesMode) {
+                isScrolling = true;
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 800);
+
+                if (e.deltaY > 0) {
+                    // Scrolling down
+                    if (currentSlide === totalSlides - 1) {
+                        // On last slide, transition to courses section
+                        isInSlidesMode = false;
+                        document.body.style.overflow = 'auto';
+                        coursesSection.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        nextSlide();
+                    }
+                } else if (e.deltaY < 0) {
+                    prevSlide();
+                }
+            } else {
+                // In courses section, check if scrolling back up to slides
+                if (e.deltaY < 0 && window.scrollY <= 100) {
+                    e.preventDefault();
+                    isInSlidesMode = true;
+                    document.body.style.overflow = 'hidden';
+                    window.scrollTo(0, 0);
+                    goToSlide(totalSlides - 1);
+                }
+            }
+        }, { passive: false });
+
+        // Initialize
+        initProgressDots();
+        updateSlide();
+        document.body.style.overflow = 'hidden';
+    </script>
 </body>
 </html>
